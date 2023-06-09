@@ -1,4 +1,4 @@
-В этой папке представлены файлы с исходным кодом патча для северной части проекта
+This folder contains files with the source code for the patch for the northern part of the project
 
 // Spells.dbc
 // Author: Pelmeshka-2848
