@@ -1,0 +1,1894 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<title>DB/Spell - wowdev</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"81b6d1c6f49cd4cf507467f4","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"DB/Spell","wgTitle":"DB/Spell","wgCurRevisionId":35623,"wgRevisionId":35623,"wgArticleId":172,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["DBC","DBC Alpha","DBC Vanilla","DBC BC","DBC WotLK","DBC Cataclysm","DBC MoP","3.3.5.12340","4.0.3.13329","DBC WoD","6.0.1.18179","DBC Legion","SpellData"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"DB/Spell","wgRelevantArticleId":172,"wgIsProbablyEditable":!1,
+"wgRelevantPageIsProbablyEditable":!1,"wgRestrictionEdit":[],"wgRestrictionMove":[]};RLSTATE={"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready","mediawiki.toc.styles":"ready"};RLPAGEMODULES=["site","mediawiki.page.startup","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/load.php?lang=en&amp;modules=mediawiki.toc.styles%7Cskins.vector.styles.legacy&amp;only=styles&amp;skin=vector" />
+<script async src="/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content />
+<link rel="stylesheet" href="/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector" />
+<meta name="generator" content="MediaWiki 1.35.10" />
+<link rel="apple-touch-icon" href="wowdevlogo.png" />
+<link rel="shortcut icon" href="wowdevlogo.png" />
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch_desc.php" title="wowdev (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="https://wowdev.wiki/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="wowdev Atom feed" href="/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="alternate" type="application/rss+xml" title="wowdev RSS feed" href="/index.php?title=Special:RecentChanges&amp;feed=rss" />
+<!--[if lt IE 9]><script src="/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-DB_Spell rootpage-DB_Spell skin-vector action-view skin-vector-legacy">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+<a id="top"></a>
+<div id="siteNotice" class="mw-body-content"></div>
+<div class="mw-indicators mw-body-content">
+</div>
+<h1 id="firstHeading" class="firstHeading" lang="en">DB/Spell</h1>
+<div id="bodyContent" class="mw-body-content">
+<div id="siteSub" class="noprint">From wowdev</div>
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#7.0.1.21737"><span class="tocnumber">1</span> <span class="toctext">7.0.1.21737</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#6.0.1.18179"><span class="tocnumber">2</span> <span class="toctext">6.0.1.18179</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#4.0.3.13329"><span class="tocnumber">3</span> <span class="toctext">4.0.3.13329</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#3.3.5.12340"><span class="tocnumber">4</span> <span class="toctext">3.3.5.12340</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#3.0.1.8334"><span class="tocnumber">5</span> <span class="toctext">3.0.1.8334</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#1.12.1.5875_with_changes_found_by_stoneharry._Untested_but_I_think_this_structure_is_more_correct_than_the_next_one_posted"><span class="tocnumber">6</span> <span class="toctext">1.12.1.5875 with changes found by stoneharry. Untested but I think this structure is more correct than the next one posted</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#1.12.1.5875"><span class="tocnumber">7</span> <span class="toctext">1.12.1.5875</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#0.5.3.3368"><span class="tocnumber">8</span> <span class="toctext">0.5.3.3368</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Old"><span class="tocnumber">9</span> <span class="toctext">Old</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#misc"><span class="tocnumber">10</span> <span class="toctext">misc</span></a></li>
+</ul>
+</div>
+<h2><span class="mw-headline" id="7.0.1.21737">7.0.1.21737</span></h2>
+<p>Now Spell.db2. To find a list of DBC files related to the data formerly contained in this DB2, see the <a href="/Category:SpellData" title="Category:SpellData">Spell Data</a> Category.
+</p>
+<table style="background:#FCFCFC; color:black">
+<tbody><tr>
+<th width="180">Column
+</th>
+<th width="180">DBC
+</th></tr>
+<tr style="background:#E0E0E0;">
+<td>1</td>
+<td>Name</td>
+<td>String</td>
+<td>
+</td></tr>
+<tr>
+<td>2</td>
+<td>Name Subtext</td>
+<td>String</td>
+<td>
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>3</td>
+<td>Description</td>
+<td>String</td>
+<td>
+</td></tr>
+<tr>
+<td>4</td>
+<td>Tooltip</td>
+<td>String</td>
+<td>
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>5</td>
+<td><a href="/DB/SpellMisc" title="DB/SpellMisc">SpellMiscID</a></td>
+<td>iRefID</td>
+<td>
+</td></tr>
+<tr>
+<td>5</td>
+<td>ID</td>
+<td>Integer</td>
+<td>
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>6</td>
+<td><a href="/SpellDescriptionVariables.dbc" class="mw-redirect" title="SpellDescriptionVariables.dbc">DescriptionVariablesID</a></td>
+<td>iRefID</td>
+<td>
+</td></tr></tbody></table>
+<p><a href="/index.php?title=User:Synric&amp;action=edit&amp;redlink=1" class="new" title="User:Synric (page does not exist)">Synric</a> 12th July 2016
+</p>
+<h2><span class="mw-headline" id="6.0.1.18179">6.0.1.18179</span></h2>
+<pre>struct SpellRec {
+  uint32_t m_ID;
+  langstringref<a href="/Common_Types#langstringref" title="Common Types">ⁱ</a> m_name_lang;
+  langstringref<a href="/Common_Types#langstringref" title="Common Types">ⁱ</a> m_nameSubtext_lang;
+  langstringref<a href="/Common_Types#langstringref" title="Common Types">ⁱ</a> m_description_lang;
+  langstringref<a href="/Common_Types#langstringref" title="Common Types">ⁱ</a> m_auraDescription_lang;
+  uint32_t m_runeCostID;
+  uint32_t m_spellMissileID;
+  uint32_t m_descriptionVariablesID;
+  uint32_t m_scalingID;
+  uint32_t m_auraOptionsID;
+  uint32_t m_auraRestrictionsID;
+  uint32_t m_castingRequirementsID;
+  uint32_t m_categoriesID;
+  uint32_t m_classOptionsID;
+  uint32_t m_cooldownsID;
+  uint32_t m_equippedItemsID;
+  uint32_t m_interruptsID;
+  uint32_t m_levelsID;
+  uint32_t m_reagentsID;
+  uint32_t m_shapeshiftID;
+  uint32_t m_targetRestrictionsID;
+  uint32_t m_totemsID;
+  uint32_t m_requiredProjectID;
+  uint32_t m_miscID;
+};
+</pre>
+<h2><span class="mw-headline" id="4.0.3.13329">4.0.3.13329</span></h2>
+<table style="background:#FCFCFC; color:black">
+<tbody><tr>
+<th width="80">Column
+</th>
+<th width="180">Field
+</th>
+<th width="80">Type
+</th>
+<th width="500">Notes
+</th></tr>
+<tr style="background:#E0E0E0;">
+<td>1</td>
+<td>ID</td>
+<td>Integer</td>
+<td>
+</td></tr>
+<tr>
+<td>2</td>
+<td>Attributes</td>
+<td>Integer</td>
+<td>
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>3</td>
+<td>AttributesEx</td>
+<td>Integer</td>
+<td>
+</td></tr>
+<tr>
+<td>4</td>
+<td>AttributesExB</td>
+<td>Integer</td>
+<td>
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>5</td>
+<td>AttributesExC</td>
+<td>Integer</td>
+<td>
+</td></tr>
+<tr>
+<td>6</td>
+<td>AttributesExD</td>
+<td>Integer</td>
+<td>
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>7</td>
+<td>AttributesExE</td>
+<td>Integer</td>
+<td>
+</td></tr>
+<tr>
+<td>8</td>
+<td>AttributesExF</td>
+<td>Integer</td>
+<td>
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>9</td>
+<td>AttributesExG</td>
+<td>Integer</td>
+<td>
+</td></tr>
+<tr>
+<td>10</td>
+<td>AttributesExH</td>
+<td>Integer</td>
+<td>
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>11</td>
+<td>unk_400_1</td>
+<td>Integer</td>
+<td>
+</td></tr>
+<tr>
+<td>12</td>
+<td><a href="/SpellCastTimes.dbc" class="mw-redirect" title="SpellCastTimes.dbc">CastTimesID</a></td>
+<td>iRefID</td>
+<td>
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>13</td>
+<td><a href="/SpellDuration.dbc" class="mw-redirect" title="SpellDuration.dbc">DurationID</a></td>
+<td>iRefID</td>
+<td>
+</td></tr>
+<tr>
+<td>14</td>
+<td><a href="/SpellPower.dbc" class="mw-redirect" title="SpellPower.dbc">PowerID</a></td>
+<td>iRefID</td>
+<td>
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>15</td>
+<td><a href="/SpellRange.dbc" class="mw-redirect" title="SpellRange.dbc">RangeID</a></td>
+<td>iRefID</td>
+<td>
+</td></tr>
+<tr>
+<td>16</td>
+<td>Speed</td>
+<td>Float</td>
+<td>
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>17</td>
+<td><a href="/SpellVisual.dbc" class="mw-redirect" title="SpellVisual.dbc">VisualID1</a></td>
+<td>iRefID</td>
+<td>
+</td></tr>
+<tr>
+<td>18</td>
+<td><a href="/SpellVisual.dbc" class="mw-redirect" title="SpellVisual.dbc">VisualID2</a></td>
+<td>iRefID</td>
+<td>
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>19</td>
+<td><a href="/SpellIcon.dbc" class="mw-redirect" title="SpellIcon.dbc">IconID1</a></td>
+<td>iRefID</td>
+<td>
+</td></tr>
+<tr>
+<td>20</td>
+<td><a href="/SpellIcon.dbc" class="mw-redirect" title="SpellIcon.dbc">IconID2</a></td>
+<td>iRefID</td>
+<td>active
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>21</td>
+<td>Name</td>
+<td>String</td>
+<td>
+</td></tr>
+<tr>
+<td>22</td>
+<td>NameSubtext</td>
+<td>String</td>
+<td>
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>23</td>
+<td>Description</td>
+<td>String</td>
+<td>
+</td></tr>
+<tr>
+<td>24</td>
+<td>AuraDescription</td>
+<td>String</td>
+<td>
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>25</td>
+<td>SchoolMask</td>
+<td>Integer</td>
+<td>
+</td></tr>
+<tr>
+<td>26</td>
+<td><a href="/SpellRuneCost.dbc" class="mw-redirect" title="SpellRuneCost.dbc">RuneCostID</a></td>
+<td>iRefID</td>
+<td>
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>27</td>
+<td><a href="/SpellMissile.dbc" class="mw-redirect" title="SpellMissile.dbc">MissileID</a></td>
+<td>iRefID</td>
+<td>
+</td></tr>
+<tr>
+<td>28</td>
+<td><a href="/SpellDescriptionVariables.dbc" class="mw-redirect" title="SpellDescriptionVariables.dbc">DescriptionVariablesID</a></td>
+<td>iRefID</td>
+<td>
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>29</td>
+<td><a href="/SpellDifficulty.dbc" class="mw-redirect" title="SpellDifficulty.dbc">DifficultyID</a></td>
+<td>iRefID</td>
+<td>
+</td></tr>
+<tr>
+<td>30</td>
+<td>unk_400_2</td>
+<td>Float</td>
+<td>
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>31</td>
+<td><a href="/SpellScaling.dbc" class="mw-redirect" title="SpellScaling.dbc">ScalingID</a></td>
+<td>iRefID</td>
+<td>
+</td></tr>
+<tr>
+<td>32</td>
+<td><a href="/SpellAuraOptions.dbc" class="mw-redirect" title="SpellAuraOptions.dbc">AuraOptionsID</a></td>
+<td>iRefID</td>
+<td>
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>33</td>
+<td><a href="/SpellAuraRestrictions.dbc" class="mw-redirect" title="SpellAuraRestrictions.dbc">AuraRestrictionsID</a></td>
+<td>iRefID</td>
+<td>
+</td></tr>
+<tr>
+<td>34</td>
+<td><a href="/SpellCastingRequirements.dbc" class="mw-redirect" title="SpellCastingRequirements.dbc">CastingRequirementsID</a></td>
+<td>iRefID</td>
+<td>
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>35</td>
+<td><a href="/SpellCategories.dbc" class="mw-redirect" title="SpellCategories.dbc">CategoriesID</a></td>
+<td>iRefID</td>
+<td>
+</td></tr>
+<tr>
+<td>36</td>
+<td><a href="/SpellClassOptions.dbc" title="SpellClassOptions.dbc">ClassOptionsID</a></td>
+<td>iRefID</td>
+<td>
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>37</td>
+<td><a href="/SpellCooldowns.dbc" class="mw-redirect" title="SpellCooldowns.dbc">CooldownsID</a></td>
+<td>iRefID</td>
+<td>
+</td></tr>
+<tr>
+<td>38</td>
+<td>unk_400_3</td>
+<td>Integer</td>
+<td>
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>39</td>
+<td><a href="/SpellEquippedItems.dbc" class="mw-redirect" title="SpellEquippedItems.dbc">EquippedItemsID</a></td>
+<td>iRefID</td>
+<td>
+</td></tr>
+<tr>
+<td>40</td>
+<td><a href="/SpellInterrupts.dbc" class="mw-redirect" title="SpellInterrupts.dbc">InterruptsID</a></td>
+<td>iRefID</td>
+<td>
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>41</td>
+<td><a href="/SpellLevels.dbc" class="mw-redirect" title="SpellLevels.dbc">LevelsID</a></td>
+<td>iRefID</td>
+<td>
+</td></tr>
+<tr>
+<td>42</td>
+<td><a href="/SpellPower.dbc" class="mw-redirect" title="SpellPower.dbc">PowerID</a></td>
+<td>iRefID</td>
+<td>
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>43</td>
+<td><a href="/SpellReagents.dbc" class="mw-redirect" title="SpellReagents.dbc">ReagentsID</a></td>
+<td>iRefID</td>
+<td>
+</td></tr>
+<tr>
+<td>44</td>
+<td><a href="/SpellShapeshift.dbc" class="mw-redirect" title="SpellShapeshift.dbc">ShapeshiftID</a></td>
+<td>iRefID</td>
+<td>
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>45</td>
+<td><a href="/SpellTargetRestrictions.dbc" class="mw-redirect" title="SpellTargetRestrictions.dbc">TargetRestrictionsID</a></td>
+<td>iRefID</td>
+<td>
+</td></tr>
+<tr>
+<td>46</td>
+<td><a href="/SpellTotems.dbc" class="mw-redirect" title="SpellTotems.dbc">TotemsID</a></td>
+<td>iRefID</td>
+<td>
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>47</td>
+<td>unk_400_4</td>
+<td>Integer</td>
+<td>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="3.3.5.12340">3.3.5.12340</span></h2>
+<table style="background:#FCFCFC; color:black">
+<tbody><tr>
+<th width="60">Field
+</th>
+<th width="100">Type
+</th>
+<th width="200">Name
+</th>
+<th width="920">Notes
+</th></tr>
+<tr style="background:#E0E0E0;">
+<td>1</td>
+<td>uint32</td>
+<td>ID</td>
+<td>Unique ID of a spell.
+</td></tr>
+<tr>
+<td>2</td>
+<td>uint32</td>
+<td><a href="/SpellCategory.dbc" class="mw-redirect" title="SpellCategory.dbc">Spell category</a></td>
+<td>Category of a spell. Used for category cooldowns.
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>3</td>
+<td>uint32</td>
+<td><a href="/SpellDispelType.dbc" class="mw-redirect" title="SpellDispelType.dbc">Dispel type</a></td>
+<td>For determining which spells are capable of dispelling this.
+</td></tr>
+<tr>
+<td>4</td>
+<td>uint32</td>
+<td><a href="/SpellMechanic.dbc" class="mw-redirect" title="SpellMechanic.dbc">Spell mechanic</a></td>
+<td>Used by spells granting bonuses/immunities against certain effect types (stun, charm...).
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>5</td>
+<td>uint32</td>
+<td><a href="/Spell.dbc/Attributes" title="Spell.dbc/Attributes">Attributes</a></td>
+<td>Attributes are in general miscellanous flags. This page shows all attributes and is more up to date.
+</td></tr>
+<tr>
+<td>6</td>
+<td>uint32</td>
+<td><a href="/Spell.dbc/AttributesEx" title="Spell.dbc/AttributesEx">AttributesEx</a></td>
+<td>Attributes are in general miscellanous flags.
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>7</td>
+<td>uint32</td>
+<td><a href="/Spell.dbc/AttributesExB" class="mw-redirect" title="Spell.dbc/AttributesExB">AttributesExB</a></td>
+<td>Attributes are in general miscellanous flags.
+</td></tr>
+<tr>
+<td>8</td>
+<td>uint32</td>
+<td><a href="/Spell.dbc/AttributesExC" title="Spell.dbc/AttributesExC">AttributesExC</a></td>
+<td>Attributes are in general miscellanous flags.
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>9</td>
+<td>uint32</td>
+<td><a href="/Spell.dbc/AttributesExD" title="Spell.dbc/AttributesExD">AttributesExD</a></td>
+<td>Attributes are in general miscellanous flags.
+</td></tr>
+<tr>
+<td>10</td>
+<td>uint32</td>
+<td><a href="/Spell.dbc/AttributesExE" title="Spell.dbc/AttributesExE">AttributesExE</a></td>
+<td>Attributes are in general miscellanous flags.
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>11</td>
+<td>uint32</td>
+<td><a href="/Spell.dbc/AttributesExF" title="Spell.dbc/AttributesExF">AttributesExF</a></td>
+<td>Attributes are in general miscellanous flags.
+</td></tr>
+<tr>
+<td>12</td>
+<td>uint32</td>
+<td><a href="/Spell.dbc/AttributesExG" title="Spell.dbc/AttributesExG">AttributesExG</a></td>
+<td>Attributes are in general miscellanous flags.
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>13</td>
+<td>uint32</td>
+<td><a href="/SpellShapeshiftForm.dbc" class="mw-redirect" title="SpellShapeshiftForm.dbc">Stances</a></td>
+<td>Mask. Shapeshifts/Stances in which is spell castable.
+</td></tr>
+<tr>
+<td>14</td>
+<td>uint32</td>
+<td>unk_320_2</td>
+<td>Removed in 3.2.0.
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>15</td>
+<td>uint32</td>
+<td><a href="/SpellShapeshiftForm.dbc" class="mw-redirect" title="SpellShapeshiftForm.dbc">Excluded stances</a></td>
+<td>Mask. Shapeshifts/Stances in which is spell not castable.
+</td></tr>
+<tr>
+<td>16</td>
+<td>uint32</td>
+<td>unk_320_3</td>
+<td>Removed in 3.2.0
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>17</td>
+<td>uint32</td>
+<td><a href="/Spell.dbc/Targets" class="mw-redirect" title="Spell.dbc/Targets">Targets</a></td>
+<td>
+</td></tr>
+<tr>
+<td>18</td>
+<td>uint32</td>
+<td><a rel="nofollow" class="external text" href="https://wowdev.wiki/DB/Spell/TargetCreatureType">TargetCreatureType</a></td>
+<td>Mask of creature types (creature_template.type), on which is spell usable.
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>19</td>
+<td>uint32</td>
+<td><a href="/SpellFocusObject.dbc" class="mw-redirect" title="SpellFocusObject.dbc">SpellFocusObject</a></td>
+<td>Spell focus needed by spell to be casted. Player needs to be within range of apropriate gameobject with type=8.
+</td></tr>
+<tr>
+<td>20</td>
+<td>uint32</td>
+<td>FacingCasterFlags</td>
+<td>
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>21</td>
+<td>uint32</td>
+<td>CasterAuraState</td>
+<td>
+</td></tr>
+<tr>
+<td>22</td>
+<td>uint32</td>
+<td>TargetAuraState</td>
+<td>
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>23</td>
+<td>uint32</td>
+<td>CasterAuraStateNot</td>
+<td>
+</td></tr>
+<tr>
+<td>24</td>
+<td>uint32</td>
+<td>TargetAuraStateNot</td>
+<td>
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>25</td>
+<td>uint32</td>
+<td>casterAuraSpell</td>
+<td>
+</td></tr>
+<tr>
+<td>26</td>
+<td>uint32</td>
+<td>targetAuraSpell</td>
+<td>
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>27</td>
+<td>uint32</td>
+<td>excludeCasterAuraSpell</td>
+<td>
+</td></tr>
+<tr>
+<td>28</td>
+<td>uint32</td>
+<td>excludeTargetAuraSpell</td>
+<td>
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>29</td>
+<td>uint32</td>
+<td><a href="/SpellCastTimes.dbc" class="mw-redirect" title="SpellCastTimes.dbc">CastingTimeIndex</a></td>
+<td>Casting time of a spell. May differ with caster's level.
+</td></tr>
+<tr>
+<td>30</td>
+<td>uint32</td>
+<td>RecoveryTime</td>
+<td>Cooldown of a spell. May differ with caster's level.
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>31</td>
+<td>uint32</td>
+<td>CategoryRecoveryTime</td>
+<td>Cooldown applied by spell on all spells with the same Category.
+</td></tr>
+<tr>
+<td>32</td>
+<td>uint32</td>
+<td><a href="/Spell.dbc/InterruptFlags" title="Spell.dbc/InterruptFlags">InterruptFlags</a></td>
+<td>Mask of cases which interrupt casting of a spell.
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>33</td>
+<td>uint32</td>
+<td><a href="/Spell.dbc/AuraInterruptFlags" title="Spell.dbc/AuraInterruptFlags">AuraInterruptFlags</a></td>
+<td>Mask of cases which interrupt casting of a spell.
+</td></tr>
+<tr>
+<td>34</td>
+<td>uint32</td>
+<td>ChannelInterruptFlags</td>
+<td>Mask of cases which interrupt casting of a spell.
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>35</td>
+<td>uint32</td>
+<td><a href="/Spell.dbc/procFlags" title="Spell.dbc/procFlags">procFlags</a></td>
+<td>
+</td></tr>
+<tr>
+<td>36</td>
+<td>uint32</td>
+<td>procChance</td>
+<td>Most of spells with 100% chance tend to have value 101.
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>37</td>
+<td>uint32</td>
+<td>procCharges</td>
+<td>
+</td></tr>
+<tr>
+<td>38</td>
+<td>uint32</td>
+<td>maxLevel</td>
+<td>Probably maximal level from which spell can gain bonuses (or minuses) which are based on formula caster's level - spell's level.
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>39</td>
+<td>uint32</td>
+<td>baseLevel</td>
+<td>Base level of a spell.
+</td></tr>
+<tr>
+<td>40</td>
+<td>uint32</td>
+<td>spellLevel</td>
+<td>Tends to be exactly same as base level.
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>41</td>
+<td>uint32</td>
+<td><a href="/SpellDuration.dbc" class="mw-redirect" title="SpellDuration.dbc">DurationIndex</a></td>
+<td>Duration of spell's effects.
+</td></tr>
+<tr>
+<td>42</td>
+<td>uint32</td>
+<td><a href="/Spell.dbc/powerType" title="Spell.dbc/powerType">powerType</a></td>
+<td>Power type used by spell.
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>43</td>
+<td>uint32</td>
+<td>manaCost</td>
+<td>Base mana cost of a spell. Its being summed with ManaCostPercentage.
+</td></tr>
+<tr>
+<td>44</td>
+<td>uint32</td>
+<td>manaCostPerlevel</td>
+<td>Likely is mana cost increased by ((caster's level) - (spell's level))*(this field).
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>45</td>
+<td>uint32</td>
+<td>manaPerSecond</td>
+<td>For channels.
+</td></tr>
+<tr>
+<td>46</td>
+<td>uint32</td>
+<td>manaPerSecondPerLevel</td>
+<td>For channels. Likely is mana cost per second increased by ((caster's level) - (spell's level))*(this field).
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>47</td>
+<td>uint32</td>
+<td><a href="/SpellRange.dbc" class="mw-redirect" title="SpellRange.dbc">RangeIndex</a></td>
+<td>Range of a spell. May differ for friendly and enemy targets.
+</td></tr>
+<tr>
+<td>48</td>
+<td>float</td>
+<td>speed</td>
+<td>If &lt;= 0.0 client skips <code>HandleMissileEffects</code>
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>49</td>
+<td>uint32</td>
+<td>modalNextSpell</td>
+<td>
+</td></tr>
+<tr>
+<td>50</td>
+<td>uint32</td>
+<td>StackAmount</td>
+<td>For stackable spells, maximal amount of stacks on target. For non-stackable spells leave 0.
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>51-52</td>
+<td>uint32</td>
+<td>Totem[2]</td>
+<td>Non consumable items required to cast the spell e.g. <a rel="nofollow" class="external text" href="https://wowhead.com/item=5956">Blacksmith Hammer</a>.
+</td></tr>
+<tr>
+<td>53-60</td>
+<td>int32</td>
+<td><a href="/Item.dbc" class="mw-redirect" title="Item.dbc">Reagent</a>[8]</td>
+<td>Entries of items used by this spell as resources.
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>61-68</td>
+<td>uint32</td>
+<td>ReagentCount[8]</td>
+<td>Count of according items needed by spell.
+</td></tr>
+<tr>
+<td>69</td>
+<td>int32</td>
+<td>EquippedItemClass</td>
+<td>item_template.class value which caster's item held in hand must have. Commonly 2 (weapon).
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>70</td>
+<td>int32</td>
+<td><a href="/Spell.dbc/EquippedItemSubClassMask" title="Spell.dbc/EquippedItemSubClassMask">EquippedItemSubClassMask</a></td>
+<td>Mask of item_template.subclass values which caster's item held in hand must have. For example dagger for Backstab.
+</td></tr>
+<tr>
+<td>71</td>
+<td>int32</td>
+<td><a href="/Spell.dbc/EquippedItemInventoryTypeMask" title="Spell.dbc/EquippedItemInventoryTypeMask">EquippedItemInventoryTypeMask</a></td>
+<td>Mask of item_template.InventoryType values which targeted item must have. Used mainly by enchants.
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>72-74</td>
+<td>int32</td>
+<td><a href="/Spell.dbc/Effect" title="Spell.dbc/Effect">Effect</a>[3]</td>
+<td>Type of effect which spell has. All following effect fields (and some at the end of DBC) reffer to these up to 3 effects.
+</td></tr>
+<tr>
+<td>75-77</td>
+<td>int32</td>
+<td>EffectDieSides[3]</td>
+<td>Number of sides of dice which is being rolled for random value of according effect.
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>78-80</td>
+<td>float</td>
+<td>EffectRealPointsPerLevel[3]</td>
+<td>Base points added to according EffectBasePoints based on caster's level.
+</td></tr>
+<tr>
+<td>81-83</td>
+<td>int32</td>
+<td>EffectBasePoints[3]</td>
+<td>Base points added to result of according effect's rolled dice. F.e. EffectDieSides=26 and EffectBasePoints=49 will make 50-75.
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>84-86</td>
+<td>int32</td>
+<td><a href="/SpellMechanic.dbc" class="mw-redirect" title="SpellMechanic.dbc">EffectMechanic</a>[3]</td>
+<td>Mechanic of according spell's effect. Used by spells granting bonuses/immunities against certain effect types (stun, charm...).
+</td></tr>
+<tr>
+<td>87-89</td>
+<td>uint32</td>
+<td><a href="/Spell.dbc/EffectImplicitTarget" title="Spell.dbc/EffectImplicitTarget">EffectImplicitTargetA</a>[3]</td>
+<td>Type of implicit target(s) of according effect.
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>90-92</td>
+<td>uint32</td>
+<td><a href="/Spell.dbc/EffectImplicitTarget" title="Spell.dbc/EffectImplicitTarget">EffectImplicitTargetB</a>[3]</td>
+<td>Type of implicit target(s) of according effect. Dunno what is difference between A and B.
+</td></tr>
+<tr>
+<td>93-95</td>
+<td>uint32</td>
+<td><a href="/SpellRadius.dbc" class="mw-redirect" title="SpellRadius.dbc">EffectRadiusIndex</a>[3]</td>
+<td>According spell effect's radius. May differ with caster's level.
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>96-98</td>
+<td>uint32</td>
+<td><a href="/Spell.dbc/EffectApplyAuraName" title="Spell.dbc/EffectApplyAuraName">EffectApplyAuraName</a>[3]</td>
+<td>Type of aura ("effect of effect") which according effect applies.
+</td></tr>
+<tr>
+<td>99-101</td>
+<td>uint32</td>
+<td>EffectAuraPeriod[3]</td>
+<td>How often according effect "ticks" in ms.
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>102-104</td>
+<td>uint32</td>
+<td>EffectMultipleValue[3]</td>
+<td>
+</td></tr>
+<tr>
+<td>105-107</td>
+<td>uint32</td>
+<td>EffectChainTarget[3]</td>
+<td>
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>108-110</td>
+<td>uint32</td>
+<td>EffectItemType[3]</td>
+<td>
+</td></tr>
+<tr>
+<td>111-113</td>
+<td>int32</td>
+<td>EffectMiscValue[3]</td>
+<td>Used for according effect's special misc values, commonly entries of called or used creature/item/gameobject.
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>114-116</td>
+<td>int32</td>
+<td>EffectMiscValueB[3]</td>
+<td>Used for according effect's special misc values, commonly entries of called or used creature/item/gameobject.
+</td></tr>
+<tr>
+<td>117-119</td>
+<td>uint32</td>
+<td>EffectTriggerSpell[3]</td>
+<td>Entry of spell triggered on affected target by this according effect.
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>120-122</td>
+<td>float</td>
+<td>EffectPointsPerComboPoint[3]</td>
+<td>Bonus to effect's base value based on amount of combo points on target.
+</td></tr>
+<tr>
+<td>123-125</td>
+<td>uint32</td>
+<td>EffectSpellClassMaskA[3]</td>
+<td>Entry of fields 210-212 as hex value of the spell this spell is affecting. Used for effect #1 (field 72/96)
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>126-128</td>
+<td>uint32</td>
+<td>EffectSpellClassMaskB[3]</td>
+<td>Entry of fields 210-212 as hex value of the spell this spell is affecting. Used for effect #2 (field 73/97)
+</td></tr>
+<tr>
+<td>129-131</td>
+<td>uint32</td>
+<td>EffectSpellClassMaskC[3]</td>
+<td>Entry of fields 210-212 as hex value of the spell this spell is affecting. Used for effect #3 (field 74/98)
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>132-133</td>
+<td>uint32</td>
+<td><a href="/SpellVisual.dbc" class="mw-redirect" title="SpellVisual.dbc">SpellVisual</a>[2]</td>
+<td>Visual effects of a spell.
+</td></tr>
+<tr>
+<td>134</td>
+<td>uint32</td>
+<td><a href="/SpellIcon.dbc" class="mw-redirect" title="SpellIcon.dbc">SpellIconID</a></td>
+<td>ID of icon used while spell is not active.
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>135</td>
+<td>uint32</td>
+<td><a href="/SpellIcon.dbc" class="mw-redirect" title="SpellIcon.dbc">activeIconID</a></td>
+<td>ID of icon used while spell is active. Used f.e. by Stealth.
+</td></tr>
+<tr>
+<td>136</td>
+<td>uint32</td>
+<td>spellPriority
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>137-152</td>
+<td>langstringref<a href="/Common_Types#langstringref" title="Common Types">ⁱ</a></td>
+<td>SpellName</td>
+<td>Name of a spell.
+</td></tr>
+<tr>
+<td>154-169</td>
+<td>langstringref<a href="/Common_Types#langstringref" title="Common Types">ⁱ</a></td>
+<td>SpellSubtext</td>
+<td>Subname of a spell, commonly used for distinguishing ranks.
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>170</td>
+<td>unk</td>
+<td>unk</td>
+<td>
+</td></tr>
+<tr>
+<td>171-186</td>
+<td>langstringref<a href="/Common_Types#langstringref" title="Common Types">ⁱ</a></td>
+<td>Description</td>
+<td>Description of a spell shown when spell is mouse-overed in anaction bar or in a spellbook.
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>188-203</td>
+<td>langstringref<a href="/Common_Types#langstringref" title="Common Types">ⁱ</a></td>
+<td>ToolTip</td>
+<td>Tooltip shown when spell's aura buff/debuff is mouse-overed.
+</td></tr>
+<tr>
+<td>204</td>
+<td>unk</td>
+<td>unk</td>
+<td>
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>205</td>
+<td>uint32</td>
+<td>ManaCostPercentage</td>
+<td>% of base mana cost, added to flat value in manaCost field. For NPCs is base mana = their max mana.
+</td></tr>
+<tr>
+<td>206</td>
+<td>uint32</td>
+<td>StartRecoveryCategory</td>
+<td>The only value which seems to be used here apart of 0 is 133 (spells affected by global CD).
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>207</td>
+<td>uint32</td>
+<td>StartRecoveryTime</td>
+<td>The only value (in ms) which seems to be used here apart of 0 is 1500 (global CD value).
+</td></tr>
+<tr>
+<td>208</td>
+<td>uint32</td>
+<td>MaxTargetLevel</td>
+<td>Seems to be maximal level of target which can be affected by spell.
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>209</td>
+<td>uint32</td>
+<td>SpellClassSet</td>
+<td>Apparently serves for distinguishing class spells.
+</td></tr>
+<tr>
+<td>210-212</td>
+<td>uint32</td>
+<td>SpellClassMask[3]</td>
+<td>Used by spells that affect this spell. Field 210 is used for fields A1/B1/C1 of the affecting spell. Field 211 is used for fields A2/B2/C2 of the affecting spell. Field 212 is used for fields A3/B3/C3 of the affecting spells.
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>213</td>
+<td>uint32</td>
+<td>MaxAffectedTargets</td>
+<td>Oddly seems to be used only rarely.
+</td></tr>
+<tr>
+<td>214</td>
+<td>uint32</td>
+<td><a href="/Spell.dbc/DmgClass" title="Spell.dbc/DmgClass">DefenseType</a></td>
+<td>DefenseType
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>215</td>
+<td>uint32</td>
+<td><a href="/Spell.dbc/PreventionType" title="Spell.dbc/PreventionType">PreventionType</a></td>
+<td>PreventionType
+</td></tr>
+<tr>
+<td>216</td>
+<td>uint32</td>
+<td>StanceBarOrder</td>
+<td>
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>217-219</td>
+<td>float</td>
+<td>EffectChainAmplitude[3]</td>
+<td>Used for decreasing (or increasing) according effect's value on next chained targets.
+</td></tr>
+<tr>
+<td>220</td>
+<td>uint32</td>
+<td>MinFactionId</td>
+<td>Probably ID of required reputation with a faction.
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>221</td>
+<td>uint32</td>
+<td>MinReputation</td>
+<td>Probably either value or level of required reputation with a faction.
+</td></tr>
+<tr>
+<td>222</td>
+<td>uint32</td>
+<td>RequiredAuraVision</td>
+<td>
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>223-224</td>
+<td>uint32</td>
+<td><a href="/TotemCategory.dbc" class="mw-redirect" title="TotemCategory.dbc">TotemCategory</a>[2]</td>
+<td>Category of totem (Item with correct item_template.TotemCategory) required for a spell.
+</td></tr>
+<tr>
+<td>225</td>
+<td>uint32</td>
+<td><a href="/AreaGroup.dbc" class="mw-redirect" title="AreaGroup.dbc">RequiredAreaGroupId</a></td>
+<td>Areas in which a spell can be cast.
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>226</td>
+<td>uint32</td>
+<td><a href="/Spell.dbc/SchoolMask" title="Spell.dbc/SchoolMask">SchoolMask</a></td>
+<td>Mask of schools in which spell belongs. Used by resistance/armor system.
+</td></tr>
+<tr>
+<td>227</td>
+<td>uint32</td>
+<td><a href="/SpellRuneCost.dbc" class="mw-redirect" title="SpellRuneCost.dbc">RuneCostID</a></td>
+<td>I'm not sure where this points to. Hopefully linked DBC.
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>228</td>
+<td>uint32</td>
+<td>SpellMissileID</td>
+<td>
+</td></tr>
+<tr>
+<td>229</td>
+<td>uint32</td>
+<td><a href="/PowerDisplay.dbc" class="mw-redirect" title="PowerDisplay.dbc">PowerDisplayId</a></td>
+<td>3.1
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>230-232</td>
+<td>float</td>
+<td>EffectBonusMultiplier[3]</td>
+<td>Seems to be used for calculation of one according effect's value of "tick" for DoTs and HoTs.
+</td></tr>
+<tr>
+<td>233</td>
+<td>uint32</td>
+<td>SpellDescriptionVariableID</td>
+<td>3.2.0
+</td></tr>
+<tr style="background:#E0E0E0;">
+<td>234</td>
+<td>uint32</td>
+<td>SpellDifficultyId</td>
+<td>3.3.0
+</td></tr></tbody></table>
+<p><a href="/User:Amaroth" title="User:Amaroth">Amaroth</a> 13th June 2016
+</p>
+<h2><span class="mw-headline" id="3.0.1.8334">3.0.1.8334</span></h2>
+<pre>3 fields have been added after 113 (114, 155, 116 are new, old 114 is now 117 etc)
+new field 217 seems to be reference to SpellRuneCost.dbc
+new field 218 has something to do with "Tracjectory" / missiles
+</pre>
+<h2><span class="mw-headline" id="1.12.1.5875_with_changes_found_by_stoneharry._Untested_but_I_think_this_structure_is_more_correct_than_the_next_one_posted">1.12.1.5875 with changes found by stoneharry. Untested but I think this structure is more correct than the next one posted</span></h2>
+<pre>uint ID
+uint SchoolMask
+uint Category
+int castUI
+uint Dispel
+uint Mechanic
+uint Attributes
+uint AttributesEx
+uint AttributesEx2
+uint AttributesEx3
+uint AttributesEx4
+uint ShapeshiftMask
+uint ShapeshiftExclude
+uint Targets
+uint TargetCreatureType
+uint RequiresSpellFocus
+uint CasterAuraState
+uint TargetAuraState
+uint CastingTimeIndex
+uint RecoveryTime
+uint CategoryRecoveryTime
+uint InterruptFlags
+uint AuraInterruptFlags
+uint ChannelInterruptFlags
+uint ProcFlags
+uint ProcChance
+uint ProcCharges
+uint MaximumLevel
+uint BaseLevel
+uint SpellLevel
+uint DurationIndex
+uint PowerType
+uint ManaCost
+uint ManaCostPerLevel
+uint ManaPerSecond
+uint ManaPerSecondPerLevel
+uint RangeIndex
+uint Speed
+uint ModalNextSpell
+uint StackAmount
+uint Totem1
+uint Totem2
+int Reagent1
+int Reagent2
+int Reagent3
+int Reagent4
+int Reagent5
+int Reagent6
+int Reagent7
+int Reagent8
+uint ReagentCount1
+uint ReagentCount2
+uint ReagentCount3
+uint ReagentCount4
+uint ReagentCount5
+uint ReagentCount6
+uint ReagentCount7
+uint ReagentCount8
+int EquippedItemClass
+int EquippedItemSubClassMask
+int EquippedItemInventoryTypeMask
+uint Effect1
+uint Effect2
+uint Effect3
+int EffectDieSides1
+int EffectDieSides2
+int EffectDieSides3
+int EffectBaseDice1
+int EffectBaseDice2
+int EffectBaseDice3
+int EffectDicePerLevel1
+int EffectDicePerLevel2
+int EffectDicePerLevel3
+int EffectRealPointsPerLevel1
+int EffectRealPointsPerLevel2
+int EffectRealPointsPerLevel3
+int EffectBasePoints1
+int EffectBasePoints2
+int EffectBasePoints3
+uint EffectMechanic1
+uint EffectMechanic2
+uint EffectMechanic3
+uint EffectImplicitTargetA1
+uint EffectImplicitTargetA2
+uint EffectImplicitTargetA3
+uint EffectImplicitTargetB1
+uint EffectImplicitTargetB2
+uint EffectImplicitTargetB3
+uint EffectRadiusIndex1
+uint EffectRadiusIndex2
+uint EffectRadiusIndex3
+uint EffectApplyAuraName1
+uint EffectApplyAuraName2
+uint EffectApplyAuraName3
+uint EffectAmplitude1
+uint EffectAmplitude2
+uint EffectAmplitude3
+float EffectMultipleValue1
+float EffectMultipleValue2
+float EffectMultipleValue3
+uint EffectChainTarget1
+uint EffectChainTarget2
+uint EffectChainTarget3
+uint EffectItemType1
+uint EffectItemType2
+uint EffectItemType3
+int EffectMiscValue1
+int EffectMiscValue2
+int EffectMiscValue3
+uint EffectTriggerSpell1
+uint EffectTriggerSpell2
+uint EffectTriggerSpell3
+float EffectPointsPerComboPoint1
+float EffectPointsPerComboPoint2
+float EffectPointsPerComboPoint3
+uint SpellVisual1
+uint SpellVisual2
+uint SpellIconID
+uint ActiveIconID
+uint SpellPriority
+uint SpellName0 string
+uint SpellName1 string
+uint SpellName2 string
+uint SpellName3 string
+uint SpellName4 string
+uint SpellName5 string
+uint SpellName6 string
+uint SpellName7 string
+uint SpellNameFlag0
+uint SpellRank0 string
+uint SpellRank1 string
+uint SpellRank2 string
+uint SpellRank3 string
+uint SpellRank4 string
+uint SpellRank5 string
+uint SpellRank6 string
+uint SpellRank7 string
+uint SpellRankFlags0
+uint SpellDescription0 string
+uint SpellDescription1 string
+uint SpellDescription2 string
+uint SpellDescription3 string
+uint SpellDescription4 string
+uint SpellDescription5 string
+uint SpellDescription6 string
+uint SpellDescription7 string
+uint SpellDescriptionFlags0
+uint SpellToolTip0 string
+uint SpellToolTip1 string
+uint SpellToolTip2 string
+uint SpellToolTip3 string
+uint SpellToolTip4 string
+uint SpellToolTip5 string
+uint SpellToolTip6 string
+uint SpellToolTip7 string
+uint SpellToolTipFlags0
+uint ManaCostPercentage
+uint StartRecoveryCategory
+uint StartRecoveryTime
+uint MaximumTargetLevel
+uint SpellClassSet
+uint SpellClassMask1
+uint SpellClassMask2
+uint MaximumAffectedTargets
+uint DamageClass
+uint PreventionType
+uint StanceBarOrder
+float EffectDamageMultiplier1
+float EffectDamageMultiplier2
+float EffectDamageMultiplier3
+uint MinimumFactionId
+uint MinimumReputation
+uint RequiredAuraVision
+</pre>
+<h2><span class="mw-headline" id="1.12.1.5875">1.12.1.5875</span></h2>
+<pre>Id  int(11)  YES  Unique ID
+school  int(11)  YES   
+Category  int(11)  YES   
+castUI  int(11)  NO   
+dispelType  int(11)  YES   
+mechanic  float  YES   
+attributes  float  YES   
+attributesEx  float  YES   
+attributesEx2  float  YES   
+attributesEx3  float  YES   
+attributesEx4  float  YES   
+shapeshiftMask  int(11)  YES   
+shapeshiftexclude  float  YES   
+targets  float  YES   
+targetCreatureType  int(11)  YES   
+requiresSpellFocus  int(11)  YES   
+casterAuraState  int(11)  YES   
+targetAuraState  int(11)  YES   
+castingTimeIndex  int(11)  YES   
+recoveryTime  int(11)  YES   
+categoryRecoveryTime  int(11)  YES   
+auraInterruptFlags  int(11)  YES   
+channelInterruptFlags  int(11)  YES   
+procTypeMask  int(11)  YES   
+procChance  int(11)  YES   
+procCharges  int(11)  YES   
+MaxLevel  int(11)  YES   
+baseLevel  int(11)  YES   
+spellLevel  int(11)  YES   
+durationIndex  int(11)  YES   
+PowerType  int(11)  YES   
+manaCost  int(11)  YES   
+manaCostPerLevel  int(11)  YES   
+manaCostPerSecond  int(11)  YES   
+manaCostPerSecondPerLevel  int(11)  YES   
+rangeIndex  int(11)  YES   
+Speed  int(11)  YES   
+modalNextSpell  int(11)  YES   
+stackAmount  int(11)  YES   
+Totem  int(11)  YES   
+Totem2  int(11)  YES   
+reagent1  int(11)  YES   
+reagent2  int(11)  YES   
+reagent3  int(11)  YES   
+reagent4  int(11)  YES   
+reagent5  int(11)  YES   
+reagent6  int(11)  YES   
+reagent7  int(11)  YES   
+reagent8  int(11)  YES   
+reagentCount1  int(11)  YES   
+reagentCount2  int(11)  YES   
+reagentCount3  int(11)  YES   
+reagentCount4  int(11)  YES   
+reagentCount5  int(11)  YES   
+reagentCount6  int(11)  YES   
+reagentCount7  int(11)  YES   
+reagentCount8  int(11)  YES   
+equippedItemClass  int(11)  YES   
+equippedItemSubclass  float  YES   
+equippedItemInvType  int(11)  YES   
+effect1  int(11)  YES   
+effect2  int(11)  YES   
+effect3  int(11)  YES   
+effectDieSides1  int(11)  YES   
+effectDieSides2  int(11)  YES   
+effectDieSides3  int(11)  YES   
+effectBaseDice1  int(11)  YES   
+effectBaseDice2  int(11)  YES   
+effectBaseDice3  int(11)  YES   
+effectDicePerLevel1  int(11)  YES   
+effectDicePerLevel2  int(11)  YES   
+effectDicePerLevel3  int(11)  YES   
+effectRealPointsPerLevel1  int(11)  YES   
+effectRealPointsPerLevel2  int(11)  YES   
+effectRealPointsPerLevel3  int(11)  YES   
+effectBasePoints1  int(11)  YES   
+effectBasePoints2  int(11)  YES   
+effectBasePoints3  int(11)  YES   
+effectMechanic1  int(11)  YES   
+effectMechanic2  int(11)  YES   
+effectMechanic3  int(11)  YES   
+implicitTargetA1  int(11)  YES   
+implicitTargetA2  int(11)  YES   
+implicitTargetA3  int(11)  YES   
+implicitTargetB1  int(11)  YES   
+implicitTargetB2  int(11)  YES   
+implicitTargetB3  int(11)  YES   
+effectRadiusIndex1  int(11)  YES   
+effectRadiusIndex2  int(11)  YES   
+effectRadiusIndex3  int(11)  YES   
+effectAura1  int(11)  YES   
+effectAura2  int(11)  YES   
+effectAura3  int(11)  YES   
+effectAmplitude1  int(11)  YES   
+effectAmplitude2  int(11)  YES   
+effectAmplitude3  int(11)  YES   
+effectMultipleValue1  int(11)  YES   
+effectMultipleValue2  float  YES   
+effectMultipleValue3  int(11)  YES   
+effectChainTarget1  int(11)  YES   
+effectChainTarget2  int(11)  YES   
+effectChainTarget3  int(11)  YES   
+effectItemType1  int(11)  YES   
+effectItemType2  float  YES   
+effectItemType3  float  YES   
+effectMiscValue1  int(11)  YES   
+effectMiscValue2  int(11)  YES   
+effectMiscValue3  int(11)  YES   
+effectTriggerSpell1  int(11)  YES   
+effectTriggerSpell2  int(11)  YES   
+effectTriggerSpell3  int(11)  YES   
+effectPointsPerCombo1  int(11)  YES   
+effectPointsPerCombo2  int(11)  YES   
+effectPointsPerCombo3  int(11)  YES   
+spellVisualID1  int(11)  YES   
+spellVisualID2  int(11)  YES   
+spellIconID  int(11)  NO   
+ActiveIconId  int(11)  YES   
+spellPriority  int(11)  YES   
+UnknownFlag  int(11)  NO   
+Name  text  YES   
+Name1  text  YES  The Localised Korean version of the above.
+Name2  text  YES  The Localised French version of the above.
+Name3  text  YES  The Localised German version of the above.
+Name4  text  YES  The Localised Chinese version of the above.
+Name5  text  YES  The Localised Taiwanese version of the above.
+Name6  text  YES  The Localised Spanish (Traditional) version of the above.
+Name7  text  YES  The Localised Spanish (Latin America) version of the above.
+TEXTCHECKSUM1  float  NO  A checksum value for the preceeding text fields.
+NameSubText  text  YES   
+NameSubText1  text  YES  The Localised Korean version of the above.
+NameSubText2  text  YES  The Localised French version of the above.
+NameSubText3  text  YES  The Localised German version of the above.
+NameSubText4  text  YES  The Localised Chinese version of the above.
+NameSubText5  text  YES  The Localised Taiwanese version of the above.
+NameSubText6  text  YES  The Localised Spanish (Traditional) version of the above.
+NameSubText7  text  YES  The Localised Spanish (Latin America) version of the above.
+TEXTCHECKSUM2  float  NO  A checksum value for the preceeding text fields.
+Description  text  NO   
+Description1  text  NO  The Localised Korean version of the above.
+Description2  text  NO  The Localised French version of the above.
+Description3  text  NO  The Localised German version of the above.
+Description4  text  NO  The Localised Chinese version of the above.
+Description5  text  NO  The Localised Taiwanese version of the above.
+Description6  text  NO  The Localised Spanish (Traditional) version of the above.
+Description7  text  NO  The Localised Spanish (Latin America) version of the above.
+TEXTCHECKSUM3  float  NO  A checksum value for the preceeding text fields.
+auraDescription  text  NO   
+auraDescription1  text  NO  The Localised Korean version of the above.
+auraDescription2  text  NO  The Localised French version of the above.
+auraDescription3  text  NO  The Localised German version of the above.
+auraDescription4  text  NO  The Localised Chinese version of the above.
+auraDescription5  text  NO  The Localised Taiwanese version of the above.
+auraDescription6  text  NO  The Localised Spanish (Traditional) version of the above.
+auraDescription7  text  NO  The Localised Spanish (Latin America) version of the above.
+TEXTCHECKSUM4  float  NO  A checksum value for the preceeding text fields.
+manaCostPct  int(11)  YES   
+startRecoveryCategory  int(11)  YES   
+startRecoveryTime  int(11)  YES   
+maxTargetLevel  int(11)  YES   
+spellClassSet  int(11)  YES   
+spellClassMask1  float  YES   
+spellClassMask2  float  YES   
+maxTargets  int(11)  YES   
+defenseType  int(11)  YES   
+preventionType  int(11)  YES   
+stanceBarOrder  int(11)  NO   
+DamageMultiplier1  float  YES   
+DamageMultiplier2  float  YES   
+DamageMultiplier3  float  YES   
+minFactionId  int(11)  NO   
+minReputation  int(11)  NO   
+requiredAuraVision  int(11)  NO
+</pre>
+<h2><span class="mw-headline" id="0.5.3.3368">0.5.3.3368</span></h2>
+<pre>struct SpellRec {
+  uint32_t m_ID;
+  uint32_t m_school;
+  uint32_t m_category;
+  uint32_t m_castUI;      // SPELL_CAST_UI_TYPE
+  uint32_t m_attributes;
+  uint32_t m_attributesEx;
+  uint32_t m_shapeshiftMask;
+  uint32_t m_targets;
+  uint32_t m_targetCreatureType;
+  uint32_t m_requiresSpellFocus;
+  uint32_t m_casterAuraState;
+  uint32_t m_targetAuraState;
+  uint32_t m_castingTimeIndex;
+  uint32_t m_recoveryTime;
+  uint32_t m_categoryRecoveryTime;
+  uint32_t m_interruptFlags;
+  uint32_t m_auraInterruptFlags;
+  uint32_t m_channelInterruptFlags;
+  uint32_t m_procFlags;
+  uint32_t m_procChance;
+  uint32_t m_procCharges;
+  uint32_t m_maxLevel;
+  uint32_t m_baseLevel;
+  uint32_t m_spellLevel;
+  uint32_t m_durationIndex;
+  uint32_t m_powerType;
+  uint32_t m_manaCost;
+  uint32_t m_manaCostPerLevel;
+  uint32_t m_manaPerSecond;
+  uint32_t m_manaPerSecondPerLevel;
+  uint32_t m_rangeIndex;
+  float m_speed;
+  uint32_t m_modalNextSpell;
+  uint32_t m_totem[2];
+  uint32_t m_reagent[8];
+  uint32_t m_reagentCount[8];
+  uint32_t m_equippedItemClass;
+  uint32_t m_equippedItemSubclass;
+  uint32_t m_effect[3];
+  uint32_t m_effectDieSides[3];
+  uint32_t m_effectBaseDice[3];
+  uint32_t m_effectDicePerLevel[3];
+  float m_effectRealPointsPerLevel[3];
+  uint32_t m_effectBasePoints[3];
+  uint32_t m_implicitTargetA[3];
+  uint32_t m_implicitTargetB[3];
+  uint32_t m_effectRadiusIndex[3];
+  uint32_t m_effectAura[3];
+  uint32_t m_effectAuraPeriod[3];
+  float m_effectAmplitude[3];
+  uint32_t m_effectChainTargets[3];
+  uint32_t m_effectItemType[3];
+  uint32_t m_effectMiscValue[3];
+  uint32_t m_effectTriggerSpell[3];
+  uint32_t m_spellVisualID;
+  uint32_t m_spellIconID;
+  uint32_t m_activeIconID;
+  uint32_t m_spellPriority;
+  langstringref<a href="/Common_Types#langstringref" title="Common Types">ⁱ</a> m_name_lang;
+  langstringref<a href="/Common_Types#langstringref" title="Common Types">ⁱ</a> m_nameSubtext_lang;
+  langstringref<a href="/Common_Types#langstringref" title="Common Types">ⁱ</a> m_description_lang;
+  uint32_t m_manaCostPct;
+  uint32_t m_startRecoveryCategory;
+  uint32_t m_startRecoveryTime;
+};
+
+enum SPELL_CAST_UI_TYPE
+{
+  SPELL_CAST_UI_NONE = 0x0,
+  SPELL_CAST_UI_PET_TRAINING = 0x1,
+  SPELL_CAST_UI_DISGUISES = 0x2,
+  SPELL_CAST_UI_INSCRIBING = 0x3,
+  NUM_SPELL_CAST_UI_TYPES = 0x4,
+};
+</pre>
+<h2><span class="mw-headline" id="Old">Old</span></h2>
+<pre><b>Column	Field 				Type 		Notes</b> 
+1 	ID 				Integer 	
+2 	iRefID_<a href="/Resistances.dbc" class="mw-redirect" title="Resistances.dbc">Resistances</a> 		Integer 	School Category. Also serves as resistance component. 
+3 	iRefID_<a href="/SpellCategory.dbc" class="mw-redirect" title="SpellCategory.dbc">SpellCategory</a> 		Integer 	
+4 	Unknown 			Integer 	
+5 	iRefID_<a href="/SpellDispelType.dbc" class="mw-redirect" title="SpellDispelType.dbc">SpellDispelType</a> 		Integer 	Dispel type 
+6 	iRefID_<a href="/SpellMechanic.dbc" class="mw-redirect" title="SpellMechanic.dbc">SpellMechanic</a> 		Integer 	Main mechanic applied to the spell being cast 
+7 	Unknown 			BitMask 	Bit 0x10000000 = "Cannot be cast when in combat". 
+8 	Unknown 			BitMask 	
+9 	targets 			BitMask 	...&gt; Internal arrays? 
+10 	Unknown 			BitMask 	Moved from column 168 (Patch 0.12.0) Bit 0x100000 = Persist through death (Flasks, Ghost, Deserter etc) 	
+11 	Unknown 			Unknown 	Added with 0.12.0 
+12 	Unknown 			Unknown 	Added with Beta 2.0.0.6022 
+13 	iRefMask_<a href="/SpellShapeshiftForm.dbc" class="mw-redirect" title="SpellShapeshiftForm.dbc">SpellShapeshiftForm</a> 	BitMask 	BitMask for which shapeshift forms this spell can be used in. 
+14 	iRefMask_<a href="/SpellShapeshiftForm.dbc" class="mw-redirect" title="SpellShapeshiftForm.dbc">SpellShapeshiftForm</a> 	BitMask 	BitMask for which shapeshift forms this spell cannot be used in. 
+15 	Unknown 			Unknown 	 
+16 	iRefMask_<a href="/CreatureType.dbc" class="mw-redirect" title="CreatureType.dbc">CreatureType</a> 		BitMask 	
+17 	iRefID_<a href="/SpellFocusObject.dbc" class="mw-redirect" title="SpellFocusObject.dbc">SpellFocusObject</a> 	Integer 	The object that needs to be near, targeted, or on person to cast 
+18 	caster_aura_state 		Integer 	Requirements that need to be met, before spell/ability is usable, on caster... 
+19 	target_aura_state 		Integer 	...or target. 
+20 	Unknown 			Unknown 	(Added in 2.0.0.5894) 
+21 	Unknown 			Unknown 	(Added in 2.0.0.5894) 
+22 	iRefID_<a href="/SpellCastTimes.dbc" class="mw-redirect" title="SpellCastTimes.dbc">SpellCastTimes</a> 		Integer 	The time in milliseconds to cast 
+23 	category_recovery_time 		Integer 	Spell cooldown. If this is set affects whole category, else... 
+24 	recovery_time 			Integer 	...if this is set affects only spell/ability being used. Note: Both can be set with different cooldowns. 
+25 	interrupt_flags 		BitMask 	What table(s) do these fields point to? &lt;... 
+26 	aura_interrupt_flags 		BitMask 	... 
+27 	channel_interrupt_flags 	BitMask 	... 
+28 	proc_flags 			BitMask 	...&gt; Internal arrays? 
+29 	proc_chance 			Integer 	
+30 	proc_charges 			Integer 	
+31 	level_max 			Integer 	The spell level when additional damage is no longer calculated. 
+32 	level_base 			Integer 	
+33 	level_spell 			Integer 	
+34 	iRefID_<a href="/SpellDuration.dbc" class="mw-redirect" title="SpellDuration.dbc">SpellDuration</a> 		Integer 	Duration is in milliseconds. ($d)
+35 	power_type 			Integer 	
+36 	mana_cost 			Integer 	To get rage cost, divide this value by 10. 
+37 	mana_cost_per_level 		Integer 	
+38 	mana_per_second 		Integer 	
+39 	mana_per_second_per_level 	Integer 	
+40 	iRefID_<a href="/SpellRange.dbc" class="mw-redirect" title="SpellRange.dbc">SpellRange</a> 		Integer 	Yard increments 
+41 	projectile_speed 		Float 		Speed of the "animation bolt" as it travels from caster to target. 
+42 	modal_next_spell 		Integer 	
+43 	stack_amount 			Integer 	Specifies how many times the spell can be applied to a target
+44 	iRefID_Tool_1 			Integer 	Required tool to cast. (eg. Mining Pick, Flint and Tinder)  
+45 	iRefID_Tool_2 			Integer 	 direct reference to an item-id
+46 	iRefID_Reagent_1 		Integer 	Reagent required to cast. Direct reference to an item-id 
+47 	iRefID_Reagent_2 		Integer 	
+48 	iRefID_Reagent_3 		Integer 	
+49 	iRefID_Reagent_4 		Integer 	
+50 	iRefID_Reagent_5 		Integer 	
+51 	iRefID_Reagent_6 		Integer 	
+52 	iRefID_Reagent_7 		Integer 	
+53 	iRefID_Reagent_8 		Integer 	
+54 	reagent_count_1 		Integer 	Amount of reagents required to use spell/ability. 
+55 	reagent_count_2 		Integer 	
+56 	reagent_count_3 		Integer 	
+57 	reagent_count_4 		Integer 	
+58 	reagent_count_5 		Integer 	
+59 	reagent_count_6 		Integer 	
+60 	reagent_count_7 		Integer 	
+61 	reagent_count_8 		Integer 	
+62 	iRefMask_<a href="/ItemClass.dbc" class="mw-redirect" title="ItemClass.dbc">ItemClass</a>		BitMask 	
+63 	iRefMask_<a href="/ItemSubClass.dbc" class="mw-redirect" title="ItemSubClass.dbc">ItemSubClass</a> 		BitMask 	
+64 	iRefMask_<a href="/Inventory_Slots" title="Inventory Slots">Inventory Slots</a> 	BitMask 	for enchanting 
+65 	effect_1_id 			Integer 	<a href="/SpellEffectNames.dbc" class="mw-redirect" title="SpellEffectNames.dbc">SpellEffectNames.dbc</a> 
+66 	effect_2_id 			Integer 	<a href="/SpellEffectNames.dbc" class="mw-redirect" title="SpellEffectNames.dbc">SpellEffectNames.dbc</a>
+67 	effect_3_id 			Integer 	<a href="/SpellEffectNames.dbc" class="mw-redirect" title="SpellEffectNames.dbc">SpellEffectNames.dbc</a>
+68 	effect_1_die_sides 		Integer 	Random Damage 
+69 	effect_2_die_sides 		Integer 	
+70 	effect_3_die_sides 		Integer 	
+71 	effect_1_base_dice 		Integer 	
+72 	effect_2_base_dice 		Integer 	
+73 	effect_3_base_dice 		Integer 	
+74 	effect_1_dice_per_level 	Integer 	
+75 	effect_2_dice_per_level 	Integer 	
+76 	effect_3_dice_per_level 	Integer 	
+77 	effect_1_real_points_per_level 	Float 	
+78 	effect_2_real_points_per_level 	Float 	
+79 	effect_3_real_points_per_level 	Float 	
+80 	effect_1_base_points 		Integer 	Base Damage ($s1)
+81 	effect_2_base_points 		Integer 	
+82 	effect_3_base_points 		Integer 	
+83 	effect_1_mechanic_id 		Integer 	<a href="/SpellMechanic.dbc" class="mw-redirect" title="SpellMechanic.dbc">SpellMechanic.dbc</a> 
+84 	effect_2_mechanic_id 		Integer 	<a href="/SpellMechanic.dbc" class="mw-redirect" title="SpellMechanic.dbc">SpellMechanic.dbc</a> 
+85 	effect_3_mechanic_id 		Integer 	<a href="/SpellMechanic.dbc" class="mw-redirect" title="SpellMechanic.dbc">SpellMechanic.dbc</a> 
+86 	effect_1_implicit_target_a 	Integer 	
+87 	effect_2_implicit_target_a 	Integer 	
+88 	effect_3_implicit_target_a 	Integer 	
+89 	effect_1_implicit_target_b 	Integer 	
+90 	effect_2_implicit_target_b 	Integer 	
+91 	effect_3_implicit_target_b 	Integer 	
+92 	effect_1_radius 		Integer 	<a href="/SpellRadius.dbc" class="mw-redirect" title="SpellRadius.dbc">SpellRadius.dbc</a> 
+93 	effect_2_radius 		Integer 	<a href="/SpellRadius.dbc" class="mw-redirect" title="SpellRadius.dbc">SpellRadius.dbc</a> 
+94 	effect_3_radius 		Integer 	<a href="/SpellRadius.dbc" class="mw-redirect" title="SpellRadius.dbc">SpellRadius.dbc</a> 
+95 	effect_1_aura 			Integer 	<a href="/SpellAuraNames.dbc" class="mw-redirect" title="SpellAuraNames.dbc">SpellAuraNames.dbc</a> 
+96 	effect_2_aura 			Integer 	<a href="/SpellAuraNames.dbc" class="mw-redirect" title="SpellAuraNames.dbc">SpellAuraNames.dbc</a> 
+97 	effect_3_aura 			Integer 	<a href="/SpellAuraNames.dbc" class="mw-redirect" title="SpellAuraNames.dbc">SpellAuraNames.dbc</a>
+98 	effect_1_amplitude 		Integer 	Refence ID: $o1 in description/buff desc. 
+99 	effect_2_amplitude 		Integer 	$o2 
+100 	effect_3_amplitude 		Integer 	$o3 
+101 	effect_1_proc_value		Float 		$e1 
+102 	effect_2_proc_value		Float 		$e2 
+103 	effect_3_proc_value		Float 		$e3 
+104 	effect_1_chain_target 		Integer 	
+105 	effect_2_chain_target 		Integer 	
+106 	effect_3_chain_target 		Integer 	
+107 	effect_1_item_type 		Integer 	used when creating items. Q:Does this refer to these <a href="/Item_Types" title="Item Types">Item Types</a>? Reference to <a href="/ItemCache.wdb" title="ItemCache.wdb">ItemCache.wdb</a> 
+108 	effect_2_item_type 		Integer 	
+109 	effect_3_item_type 		Integer 	
+110 	effect_1_misc_value 		Integer 	Reference to <a href="/SpellItemEnchantment.dbc" class="mw-redirect" title="SpellItemEnchantment.dbc">SpellItemEnchantment.dbc</a> for enchanting 
+111 	effect_2_misc_value 		Integer 	
+112 	effect_3_misc_value 		Integer 	
+113 	effect_1_trigger_spell 		Integer 	spellid that this spell teaches or triggers 
+114 	effect_2_trigger_spell 		Integer 	
+115 	effect_3_trigger_spell 		Integer 	
+116 	effect_1_proc_chance 		Float 		Seems to be $b1, having something to do with finishing moves... 
+117 	effect_2_proc_chance		Float 		$b2 
+118 	effect_3_proc_chance		Float 		$b3 
+119 	iRefID_<a href="/SpellVisual.dbc" class="mw-redirect" title="SpellVisual.dbc">SpellVisual</a> 		Integer 	
+120 	Unknown 			Integer 	Only on one spell, Sire's Suicide (18184) with a value of 749 
+121 	iRefID_<a href="/SpellIcon.dbc" class="mw-redirect" title="SpellIcon.dbc">SpellIcon</a> 		Integer 	Icon used in spellbook. 
+122 	iRefID_<a href="/SpellIcon.dbc" class="mw-redirect" title="SpellIcon.dbc">SpellIcon</a> 		Integer 	Icon used on target. 
+123 	spell_priority 			Integer 	Deciding factor if it overrides other effects. 
+124-132	sRefName 			String + <a href="/Loc" class="mw-redirect" title="Loc">Loc</a>	Names different then your clients localization will appear as null terminated strings 	
+133-141	rank 				String + <a href="/Loc" class="mw-redirect" title="Loc">Loc</a> 	
+142-150	book_description 		String + <a href="/Loc" class="mw-redirect" title="Loc">Loc</a>		DBC String Variables 	
+151-159	buff_desciption 		String + <a href="/Loc" class="mw-redirect" title="Loc">Loc</a> 	
+160 	mana_cost_percent 		Integer 	
+161 	start_recovery_category 	Integer 	
+162 	start_recovery_time 		Integer 	Global cooldown. 
+163 	affected_target_level 		Integer 	example: "Only affects Humanoid targets level affected_target_level or lower." 	
+164 	iRefID_<a href="/ChrClasses.dbc" class="mw-redirect" title="ChrClasses.dbc">ChrClasses</a> 		Integer 	Column 16 
+165 	Unknown 			BitMask 	
+166 	spell_targets 			Integer 	How many targets are affected around the currently targeted Mob/Player. 
+167 	Unknown 			BitMask 	
+168 	dmg_class 			Integer 	0=None, 1=Magic, 2=Melee, 3=Ranged 
+169 	Unknown 			Integer 	Vals = 0,1,2 
+170 	Unknown 			Integer 	
+171 	dmg_multiplier_1 		Float 	
+172 	dmg_multiplier_2 		Float 	
+173 	dmg_multiplier_3 		Float 	
+174 	Unknown 			Unknown 	
+175 	Unknown 			Unknown 	
+176 	Unknown 			Unknown 	
+177 	iRefID_<a href="/TotemCategory.dbc" class="mw-redirect" title="TotemCategory.dbc">TotemCategory</a>_1 		Integer 	Required tool (BC Alpha 8/26/2006) 
+178 	iRefID_<a href="/TotemCategory.dbc" class="mw-redirect" title="TotemCategory.dbc">TotemCategory</a>_2 		Integer 	Required tool (BC Alpha 8/26/2006) 
+179 	Unknown 			Unknown 	(Added build 5965) 
+</pre>
+<h2><span class="mw-headline" id="misc">misc</span></h2>
+<ul><li>procflags 0xa22a8, chance: 101, charges: 1 = break aura on damange received</li>
+<li>target_mask = 0x40 (DEST_LOC), target = 28 (TARGET_ALL_ENEMY_IN_AREA_CHANNELED, NO_TARGET) or 31 (TARGET_ALL_FRIENDLY_UNITS_IN_AREA): target ground</li>
+<li>target = 104 TARGET_IN_FRONT_OF_CASTER_30 (or alike): 30° frontal cone (or alike)</li></ul>
+
+
+
+</div></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wowdev.wiki/index.php?title=DB/Spell&amp;oldid=35623">https://wowdev.wiki/index.php?title=DB/Spell&amp;oldid=35623</a>"</div>
+<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="/Category:DBC" title="Category:DBC">DBC</a></li><li><a href="/Category:DBC_Alpha" title="Category:DBC Alpha">DBC Alpha</a></li><li><a href="/Category:DBC_Vanilla" title="Category:DBC Vanilla">DBC Vanilla</a></li><li><a href="/Category:DBC_BC" title="Category:DBC BC">DBC BC</a></li><li><a href="/Category:DBC_WotLK" title="Category:DBC WotLK">DBC WotLK</a></li><li><a href="/Category:DBC_Cataclysm" title="Category:DBC Cataclysm">DBC Cataclysm</a></li><li><a href="/Category:DBC_MoP" title="Category:DBC MoP">DBC MoP</a></li><li><a href="/index.php?title=Category:3.3.5.12340&amp;action=edit&amp;redlink=1" class="new" title="Category:3.3.5.12340 (page does not exist)">3.3.5.12340</a></li><li><a href="/index.php?title=Category:4.0.3.13329&amp;action=edit&amp;redlink=1" class="new" title="Category:4.0.3.13329 (page does not exist)">4.0.3.13329</a></li><li><a href="/Category:DBC_WoD" title="Category:DBC WoD">DBC WoD</a></li><li><a href="/index.php?title=Category:6.0.1.18179&amp;action=edit&amp;redlink=1" class="new" title="Category:6.0.1.18179 (page does not exist)">6.0.1.18179</a></li><li><a href="/Category:DBC_Legion" title="Category:DBC Legion">DBC Legion</a></li><li><a href="/Category:SpellData" title="Category:SpellData">SpellData</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>Navigation menu</h2>
+<div id="mw-head">
+
+<nav id="p-personal" class="vector-menu" aria-labelledby="p-personal-label" role="navigation">
+<h3 id="p-personal-label">
+<span>Personal tools</span>
+</h3>
+
+<div class="body vector-menu-content">
+
+<ul class="vector-menu-content-list"><li id="pt-createaccount"><a href="/index.php?title=Special:CreateAccount&amp;returnto=DB%2FSpell" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/index.php?title=Special:UserLogin&amp;returnto=DB%2FSpell" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+
+<nav id="p-namespaces" class="vector-menu vector-menu-tabs vectorTabs" aria-labelledby="p-namespaces-label" role="navigation">
+<h3 id="p-namespaces-label">
+<span>Namespaces</span>
+</h3>
+
+<div class="body vector-menu-content">
+
+<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected"><a href="/DB/Spell" title="View the content page [c]" accesskey="c">Page</a></li><li id="ca-talk" class="new"><a href="/index.php?title=Talk:DB/Spell&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Discussion</a></li></ul>
+</div>
+</nav>
+
+<nav id="p-variants" class="vector-menu-empty emptyPortlet vector-menu vector-menu-dropdown vectorMenu" aria-labelledby="p-variants-label" role="navigation">
+<input type="checkbox" class="vector-menu-checkbox vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+<h3 id="p-variants-label">
+<span>Variants</span>
+</h3>
+
+<div class="body vector-menu-content">
+
+<ul class="menu vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+
+<nav id="p-views" class="vector-menu vector-menu-tabs vectorTabs" aria-labelledby="p-views-label" role="navigation">
+<h3 id="p-views-label">
+<span>Views</span>
+</h3>
+
+<div class="body vector-menu-content">
+
+<ul class="vector-menu-content-list"><li id="ca-view" class="collapsible selected"><a href="/DB/Spell">Read</a></li><li id="ca-viewsource" class="collapsible"><a href="/index.php?title=DB/Spell&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li><li id="ca-history" class="collapsible"><a href="/index.php?title=DB/Spell&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li></ul>
+</div>
+</nav>
+
+<nav id="p-cactions" class="vector-menu-empty emptyPortlet vector-menu vector-menu-dropdown vectorMenu" aria-labelledby="p-cactions-label" role="navigation">
+<input type="checkbox" class="vector-menu-checkbox vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+<h3 id="p-cactions-label">
+<span>More</span>
+</h3>
+
+<div class="body vector-menu-content">
+
+<ul class="menu vector-menu-content-list"></ul>
+</div>
+</nav>
+<div id="p-search" role="search">
+<h3>
+<label for="searchInput">Search</label>
+</h3>
+<form action="/index.php" id="searchform">
+<div id="simpleSearch">
+<input type="search" name="search" placeholder="Search wowdev" title="Search wowdev [f]" accesskey="f" id="searchInput" />
+<input type="hidden" name="title" value="Special:Search">
+<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" />
+<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton" />
+</div>
+</form>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a title="Visit the main page" class="mw-wiki-logo" href="/Main_Page"></a>
+</div>
+
+<nav id="p-navigation" class="vector-menu vector-menu-portal portal portal-first" aria-labelledby="p-navigation-label" role="navigation">
+<h3 id="p-navigation-label">
+<span>Navigation</span>
+</h3>
+
+<div class="body vector-menu-content">
+
+<ul class="vector-menu-content-list"><li id="n-Main-Page-.2F-Overview"><a href="/Main_Page">Main Page / Overview</a></li><li id="n-recentchanges"><a href="/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li></ul>
+</div>
+</nav>
+
+<nav id="p-World" class="vector-menu vector-menu-portal portal" aria-labelledby="p-World-label" role="navigation">
+<h3 id="p-World-label">
+<span>World</span>
+</h3>
+
+<div class="body vector-menu-content">
+
+<ul class="vector-menu-content-list"><li id="n-ADT"><a href="/ADT/v18">ADT</a></li><li id="n-WDT"><a href="/WDT">WDT</a></li><li id="n-WDL"><a href="/WDL">WDL</a></li></ul>
+</div>
+</nav>
+
+<nav id="p-Model" class="vector-menu vector-menu-portal portal" aria-labelledby="p-Model-label" role="navigation">
+<h3 id="p-Model-label">
+<span>Model</span>
+</h3>
+
+<div class="body vector-menu-content">
+
+<ul class="vector-menu-content-list"><li id="n-M2"><a href="/M2">M2</a></li><li id="n-WMO"><a href="/WMO">WMO</a></li></ul>
+</div>
+</nav>
+
+<nav id="p-Database" class="vector-menu vector-menu-portal portal" aria-labelledby="p-Database-label" role="navigation">
+<h3 id="p-Database-label">
+<span>Database</span>
+</h3>
+
+<div class="body vector-menu-content">
+
+<ul class="vector-menu-content-list"><li id="n-DBC"><a href="/DBC">DBC</a></li><li id="n-DB2-and-up"><a href="/DB2">DB2 and up</a></li><li id="n-WDB"><a href="/WDB">WDB</a></li><li id="n-Hotfix.tbl"><a href="/Hotfix.tbl">Hotfix.tbl</a></li></ul>
+</div>
+</nav>
+
+<nav id="p-Rendering" class="vector-menu vector-menu-portal portal" aria-labelledby="p-Rendering-label" role="navigation">
+<h3 id="p-Rendering-label">
+<span>Rendering</span>
+</h3>
+
+<div class="body vector-menu-content">
+
+<ul class="vector-menu-content-list"><li id="n-General"><a href="/Rendering">General</a></li><li id="n-M2-specific"><a href="/M2/Rendering">M2 specific</a></li><li id="n-WMO-specific"><a href="/WMO/Rendering">WMO specific</a></li></ul>
+</div>
+</nav>
+
+<nav id="p-NGDP" class="vector-menu vector-menu-portal portal" aria-labelledby="p-NGDP-label" role="navigation">
+<h3 id="p-NGDP-label">
+<span>NGDP</span>
+</h3>
+
+<div class="body vector-menu-content">
+
+<ul class="vector-menu-content-list"><li id="n-NGDP"><a href="/NGDP">NGDP</a></li><li id="n-TACT"><a href="/TACT">TACT</a></li><li id="n-CASC"><a href="/CASC">CASC</a></li><li id="n-Ribbit"><a href="/Ribbit">Ribbit</a></li></ul>
+</div>
+</nav>
+
+<nav id="p-Other" class="vector-menu vector-menu-portal portal" aria-labelledby="p-Other-label" role="navigation">
+<h3 id="p-Other-label">
+<span>Other</span>
+</h3>
+
+<div class="body vector-menu-content">
+
+<ul class="vector-menu-content-list"><li id="n-Community-Projects"><a href="/Community_Projects">Community Projects</a></li><li id="n-BLP"><a href="/BLP">BLP</a></li><li id="n-BLS"><a href="/BLS">BLS</a></li><li id="n-TEX-.28Cata.2B.29"><a href="/TEX/v0">TEX (Cata+)</a></li><li id="n-Model.blob-.28Cata.2B.29"><a href="/Model.blob">Model.blob (Cata+)</a></li><li id="n-random-.3C-Vanilla"><a href="/Alpha">random &lt; Vanilla</a></li><li id="n-Client-internals"><a href="/Category:Client">Client internals</a></li><li id="n-ADT-.3D.3D-WoWEdit"><a href="/ADT/v23">ADT == WoWEdit</a></li></ul>
+</div>
+</nav>
+
+<nav id="p-DB tables by expansion" class="vector-menu vector-menu-portal portal" aria-labelledby="p-DB tables by expansion-label" role="navigation">
+<h3 id="p-DB tables by expansion-label">
+<span>DB tables by expansion</span>
+</h3>
+
+<div class="body vector-menu-content">
+
+<ul class="vector-menu-content-list"><li id="n-All-versions"><a href="/Category:DBC">All versions</a></li><li id="n-Alpha"><a href="/Category:DBC_Alpha">Alpha</a></li><li id="n-Vanilla"><a href="/Category:DBC_Vanilla">Vanilla</a></li><li id="n-BC"><a href="/Category:DBC_BC">BC</a></li><li id="n-WotLK"><a href="/Category:DBC_WotLK">WotLK</a></li><li id="n-Cataclysm"><a href="/Category:DBC_Cataclysm">Cataclysm</a></li><li id="n-MoP"><a href="/Category:DBC_MoP">MoP</a></li><li id="n-WoD"><a href="/Category:DBC_WoD">WoD</a></li><li id="n-Legion"><a href="/Category:DBC_Legion">Legion</a></li><li id="n-BfA"><a href="/Category:DBC_BfA">BfA</a></li></ul>
+</div>
+</nav>
+
+<nav id="p-DB tables by version" class="vector-menu vector-menu-portal portal" aria-labelledby="p-DB tables by version-label" role="navigation">
+<h3 id="p-DB tables by version-label">
+<span>DB tables by version</span>
+</h3>
+
+<div class="body vector-menu-content">
+
+<ul class="vector-menu-content-list"><li id="n-8606-.282.4.3.29"><a href="/Category:2.4.3.8606">8606 (2.4.3)</a></li><li id="n-8905-.283.0.2.29"><a href="/Category:3.0.2.8905">8905 (3.0.2)</a></li><li id="n-9183-.283.0.3.29"><a href="/Category:3.0.3.9183">9183 (3.0.3)</a></li><li id="n-9294-.283.0.5.29"><a href="/Category:3.0.5.9294">9294 (3.0.5)</a></li><li id="n-9506-.283.0.8.29"><a href="/Category:3.0.8.9506">9506 (3.0.8)</a></li><li id="n-9551-.283.0.9.29"><a href="/Category:3.0.9.9551">9551 (3.0.9)</a></li><li id="n-12340-.283.3.5a.29"><a href="/Category:3.3.5.12340">12340 (3.3.5a)</a></li><li id="n-13329-.284.0.3.29"><a href="/Category:4.0.3.13329">13329 (4.0.3)</a></li><li id="n-18179-.286.0.1.29"><a href="/Category:6.0.1.18179">18179 (6.0.1)</a></li><li id="n-21737-.287.0.1.29"><a href="/Category:7.0.1.21737">21737 (7.0.1)</a></li></ul>
+</div>
+</nav>
+
+<nav id="p-tb" class="vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation">
+<h3 id="p-tb-label">
+<span>Tools</span>
+</h3>
+
+<div class="body vector-menu-content">
+
+<ul class="vector-menu-content-list"><li id="t-whatlinkshere"><a href="/Special:WhatLinksHere/DB/Spell" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/Special:RecentChangesLinked/DB/Spell" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="/index.php?title=DB/Spell&amp;oldid=35623" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/index.php?title=DB/Spell&amp;action=info" title="More information about this page">Page information</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer id="footer" class="mw-footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> This page was last edited on 22 May 2023, at 04:53.</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wowdev:Privacy_policy" title="wowdev:Privacy policy">Privacy policy</a></li>
+<li id="footer-places-about"><a href="/wowdev:About" title="wowdev:About">About wowdev</a></li>
+<li id="footer-places-disclaimer"><a href="/wowdev:General_disclaimer" title="wowdev:General disclaimer">Disclaimers</a></li>
+</ul>
+<div style="clear: both;"></div>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.051","walltime":"0.057","ppvisitednodes":{"value":347,"limit":1000000},"postexpandincludesize":{"value":1872,"limit":2097152},"templateargumentsize":{"value":164,"limit":2097152},"expansiondepth":{"value":4,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    6.670      1 -total"," 58.43%    3.897     11 Template:Type"," 33.67%    2.246      1 Template:Data/Item"]},"cachereport":{"timestamp":"20230608130044","ttl":86400,"transientcontent":false}}});});</script>
+<script>var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-88399748-1']);_gaq.push(['_trackPageview']);(function(){var g=document.createElement('script');g.async=!0;g.src='https://ssl.google-analytics.com/ga.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(g,s);})();</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":117});});</script></body></html>
